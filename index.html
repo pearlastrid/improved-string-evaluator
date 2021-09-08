@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>New String Expression Evaluator</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Pearl Lin">
+        <meta charset="utf-8">
+        <link href="style.css" rel="stylesheet">
+        <script async src="evaluator.js"></script>
+    </head>
+    <body>
+        <div class="banner">
+            <h1 class="title">New String Expression Evaluator</h1>
+        </div>
+            <h4 class="author">By: Pearl Lin</h4>
+        <div class="introduction">
+            <p>The new string expression evaluator works with functions in addition to PEMDAS expressions! This was made possible by utilizing the 
+                JavaScript eval() function as opposed to parsing the string with hard code. Parentheses can now be used to denote multiplication!
+            </p>
+        </div>
+        <hr id="introhr">
+        <div class="guide">
+            <h2>Guidelines for Inputting Your Expressions</h2>
+                <p class="guidelines"><span class="symbol">✔ </span>Please use * · () × to denote multiplication. Reserve the letter x for representing variables.</p>
+                <br>
+                <p class="guidelines"><span class="symbol">✔ </span>Use either / or ÷ to indicate division</p>
+                <br>
+                <p class="guidelines"><span class="symbol">✔ </span>Use the carrot symbol ^ to represent exponentiation.</p>
+                <br>
+                <p class="guidelines"><span class="symbol">✔ </span>Use the + symbol for addition and use any of the following symbols: - ˗ − ﹣ － for subtraction & negative numbers</p>
+                <br>
+                <p class="guidelines"><span class="symbol">✔ </span>Supported ways of writing parentheses: () [] {}</p>
+                <br>
+                <p class="guidelines"><span class="symbol">✔ </span>Remember to pair all the sets of parentheses you write! If the number of opening parentheses and closing parentheses 
+                    does not equal, an error will show
+                </p>
+                <br>
+                <p class="guidelines"><span class="symbol">✔ </span>Please provide the function evaluator with a numerical value of the variable x. Both the PEMDAS 
+                    expression evaluator and the function expression evaluator are programmed to give you an exact numerical result, without variables.</p>
+        </div>
+        <hr>
+        <div class="PEMDASexpressionInput">
+            <form>
+                <label for="PEMDASexpression"><h2>Input your PEMDAS expression here!</h2></label>
+                <input type="text" class="inputs" name="PEMDASexpression" id="PEMDASExpression" required>
+                <input type="button" id="button" value="Evaluate" onclick="calculatePEMDAS()">
+            </form>
+        </div>
+        <br>
+        <div class="results">
+          <h2 id="PEMDASResult">Equals: </h2>
+        </div>
+        <hr>
+        <div class="functionexpressionInput">
+            <form>
+                <label for="functionexpression"><h2>Input your function expression here!</h2></label>
+                <h2>f(x) = <input class="inputs" type="text" name="functionexpression" id="functionExpression" required></h2>
+                <h2>Value of x: <input class="inputs" type="number" name="xvalue" id="xValue" required></h2>
+                <input type="button" id="button" value="Evaluate" onclick="calculateFunction()">
+            </form>
+        </div>
+        <br>
+        <div class="results">
+          <h2 id="functionResult">Equals: </h2>
+        </div>
+    </body>
+</html>
